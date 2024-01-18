@@ -1,0 +1,39 @@
+// Use the REST Client extension
+// The file has to end in either .rest or .http
+
+// Testing our routes
+
+
+// Test GET all route (query)
+GET http://localhost:3000/subscribers
+
+###
+// Test GET one by :id route 
+GET http://localhost:3000/subscribers/65a6ab81c2e36155e9ac7155
+
+
+###
+
+// TEST POST route
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Amazing Person",
+    "subscribedToChannel": "Web Dev Simplified"
+}
+
+
+###
+DELETE http://localhost:3000/subscribers/65a6ab81c2e36155e9ac7155
+
+
+
+###
+
+PATCH  http://localhost:3000/subscribers/65a6b03bc61c626a08a1261c
+Content-Type: application/json
+
+{
+    "name": "John"
+}
